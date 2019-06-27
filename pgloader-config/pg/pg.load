@@ -7,3 +7,5 @@ load database
   with 
   create no indexes,
   no foreign keys;
+  /* data only */
+  /* schema only */
