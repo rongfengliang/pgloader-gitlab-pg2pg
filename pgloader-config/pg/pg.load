@@ -1,0 +1,9 @@
+load database
+  from pgsql://postgres:dalong@postgres:5432/postgres
+  into pgsql://postgres:dalong@postgres2:5432/postgres
+  including only table names matching  'users','members' in schema 'public'
+  ALTER TABLE NAMES MATCHING 'users' IN SCHEMA 'public' RENAME TO 'gitlab2_users'
+  ALTER TABLE NAMES MATCHING 'members' IN SCHEMA 'public' RENAME TO 'gitlab2_members'
+  with 
+  create no indexes,
+  no foreign keys;
